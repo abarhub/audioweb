@@ -2,6 +2,10 @@
 
 .selection {
   font-stretch: condensed;
+  color: red;
 }
 
 
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

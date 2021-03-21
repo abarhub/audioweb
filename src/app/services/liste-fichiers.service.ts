@@ -1,4 +1,4 @@
-import {Fichier} from './fichier';
+import {Fichier} from '../dto/fichier';
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';

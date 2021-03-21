@@ -1,0 +1,23 @@
+<div>
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Auteur</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let fichier of getList(); let index = index; let isFirst = first; let isOdd = odd;"
+        [ngClass]="{'selection': (fichier.url===url), 'table-primary': (fichier.url===url)}">
+      <th><a href="{{fichier.url}}" target="_blank">{{fichier.nom}}</a></th>
+      <td>{{fichier.auteur}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div>
+  Sélection {{no}} : {{urlCourante?.nom}} ({{urlCourante?.auteur}}) : {{urlCourante?.url}}
+</div>
+
