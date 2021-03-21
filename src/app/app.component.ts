@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   no: number = 0;
   private stopPlay: boolean = true;
   private fini: boolean = false;
+  private initialise: boolean = false;
 
   // private audioObj = new Audio();
 
@@ -59,12 +60,12 @@ export class AppComponent implements OnInit {
   }
 
   suite(): void {
-  //   this.urlCourante = this.list[this.no];
-  //   this.no = (this.no + 1) % this.list.length;
-  //   if (this.player) {
-  //     this.player.currentTime = 0;
-  //     this.player.play();
-  //   }
+    //   this.urlCourante = this.list[this.no];
+    //   this.no = (this.no + 1) % this.list.length;
+    //   if (this.player) {
+    //     this.player.currentTime = 0;
+    //     this.player.play();
+    //   }
     console.log('suite');
     this.next2();
   }
@@ -189,11 +190,21 @@ export class AppComponent implements OnInit {
   }
 
   private init(): void {
-    this.urlCourante = this.listeFichierService.getCurrent();
-    this.no = this.listeFichierService.getNo();
+    this.listeFichierService.init().subscribe(data => {
+      this.initialise = true;
+      this.urlCourante = this.listeFichierService.getCurrent();
+      this.no = this.listeFichierService.getNo();
+      if (this.player) {
+        this.player.load();
+      }
+    });
   }
 
-  getList(): Fichier[]{
+  getList(): Fichier[] {
     return this.listeFichierService.getList();
+  }
+
+  isInitialise(): boolean {
+    return this.initialise;
   }
 }

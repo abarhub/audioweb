@@ -15,7 +15,7 @@
 <div>
   <ul>
     <li *ngFor="let fichier of getList(); let index = index; let isFirst = first; let isOdd = odd;">
-      <span>{{ index + 1 }} : {{ fichier.nom }} ( auteur : {{ fichier.auteur }}, url : {{ fichier.url }} )</span>
+      <span [ngClass]="{'selection': (index===no)}">{{ index + 1 }} : {{ fichier.nom }} ( auteur : {{ fichier.auteur }}, url : {{ fichier.url }})</span>
     </li>
   </ul>
 </div>
@@ -24,15 +24,18 @@
   Sélection {{no}} : {{urlCourante?.nom}} ({{urlCourante?.auteur}}) : {{urlCourante?.url}}
 </div>
 
-<audio id="audioPlayer" controls #audio (ended)="suite()" >
-  <source [src]="urlCourante?.url">
-</audio>
-
-<!--<button (click)="run()">Run</button>-->
-<!--<button (click)="stop()">Stop</button>-->
-<button (click)="play()">Play</button>
-<button (click)="preview()">Preview</button>
-<button (click)="next2()">Next</button>
+<div>
+  <audio id="audioPlayer" controls #audio (ended)="suite()">
+    <source [src]="urlCourante?.url">
+  </audio>
+</div>
+<div>
+  <!--<button (click)="run()">Run</button>-->
+  <!--<button (click)="stop()">Stop</button>-->
+  <button (click)="play()">Play</button>
+  <button (click)="preview()">Preview</button>
+  <button (click)="next2()">Next</button>
+</div>
 
 </body>
 </html>
