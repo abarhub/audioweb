@@ -19,7 +19,7 @@
 
   <div class="mt-3">
 <app-player [changeUrl]="selectUrl" (next)="nextUrl()" (preview)="previewUrl()" (end)="nextUrl()"
-            (changementUrl)="changementUrl($event)"></app-player>
+            (changementUrl)="changementUrl($event)" (pause)="pause()"></app-player>
   </div>
 
 </div>

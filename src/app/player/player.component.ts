@@ -15,16 +15,12 @@ export class PlayerComponent implements OnInit {
   @Output() preview = new EventEmitter<void>();
   @Output() end = new EventEmitter<void>();
   @Output() changementUrl = new EventEmitter<string>();
+  @Output() pause = new EventEmitter<void>();
 
   @Input()
   public set urlSelectionnee(url: string | null) {
     this.url = url;
   }
-
-  // @Input()
-  // public set play(play: boolean) {
-  //   this.isPlaying = play;
-  // }
 
   private player: HTMLAudioElement | null = null;
 
@@ -48,9 +44,10 @@ export class PlayerComponent implements OnInit {
   }
 
   play2(): void {
-    console.log('audio', this.player);
     if (this.player) {
-      this.player.load();
+      if (!this.player.paused) {
+        this.player.load();
+      }
       this.player.play();
       if (this.url) {
         this.changementUrl.emit(this.url);
@@ -59,68 +56,43 @@ export class PlayerComponent implements OnInit {
   }
 
   next2(): void {
-    // this.nextUrl();
-    // if (this.player) {
-    //   this.player.load();
-    //   this.player.play();
-    // }
     this.next.emit();
   }
 
   preview2(): void {
-    // this.previewUrl();
-    // if (this.player) {
-    //   this.player.load();
-    //   this.player.play();
-    // }
     this.preview.emit();
   }
 
   private attachListeners2(): void {
-    // this.audioObj.addEventListener('timeupdate', this.calculateTime, false);
-    // this.audioObj.addEventListener('playing', this.setPlayerStatus, false);
-    // this.audioObj.addEventListener('pause', this.setPlayerStatus, false);
-    // this.audioObj.addEventListener('progress', this.calculatePercentLoaded, false);
-    // this.audioObj.addEventListener('waiting', this.setPlayerStatus, false);
     if (this.player) {
       this.player.addEventListener('ended', this.setPlayerStatus, false);
     }
   }
 
   suite(): void {
-    //   this.urlCourante = this.list[this.no];
-    //   this.no = (this.no + 1) % this.list.length;
-    //   if (this.player) {
-    //     this.player.currentTime = 0;
-    //     this.player.play();
-    //   }
-    console.log('suite');
     this.next2();
   }
 
   private setPlayerStatus = (evt: any) => {
     switch (evt.type) {
       case 'playing':
-        //this.playerStatus.next('playing');
         break;
       case 'pause':
-        //this.playerStatus.next('paused');
         break;
       case 'waiting':
-        //this.playerStatus.next('loading');
         break;
       case 'ended':
-        // this.fini = true;
-        //this.playerStatus.next('ended');
-        // if (!this.stopPlay) {
-        //   this.next();
-        // }
         this.end.emit();
         break;
       default:
-        //this.playerStatus.next('paused');
         break;
     }
   };
 
+  pause2(): void {
+    if (this.player) {
+      this.player?.pause();
+      this.pause.emit();
+    }
+  }
 }

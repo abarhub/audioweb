@@ -7,5 +7,29 @@
     "url": "https://www.liberliber.it/mediateca/musica/r/ravel/bolero/mp3/ravel_bolero_ol_01.mp3",
     "nom": "Boléro",
     "auteur": "Maurice Ravel"
+  },
+  {"url": "http://www.download2mp3.com/satie_htm_files/Satie%20Gymnopedies%201-3.mp3",
+    "nom": "Gymnopedies",
+    "auteur": "Erik Satie"
+  },
+  {
+    "url": "http://www.download2mp3.com/bach_htm_files/Bach%20Airona%20G%20String.mp3",
+    "nom": "Air on a G String",
+    "auteur": "Jean Sébastien BACH"
+  },
+  {
+    "url": "http://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/2017/07/21/daily_download_20170721_128.mp3",
+    "nom": "Swan Lake: Act IV Finale",
+    "auteur": "Peter Tchaikovsky"
+  },
+  {
+    "url": "https://www.cjoint.com/doc/18_11/HKDpt4Q2fKh_Tchaikovsky---Hymn-of-the-Cherubim---USSR-Ministry-Of-Culture-Chamber-Choir-Mpgun.com-.mp3",
+    "nom": "Hymn of the Cherubim",
+    "auteur": "Pyotr Ilyich Tchaikovsky"
+  },
+  {
+    "url": "http://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/2019/04/03/daily_download_20190403_128.mp3",
+    "nom": "Miserere mei, Deus",
+    "auteur": "Allegri"
   }
 ]
