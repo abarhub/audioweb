@@ -1,6 +1,6 @@
 # Audioweb
 
-Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 [Site](https://abarhub.github.io/audioweb/)
 
