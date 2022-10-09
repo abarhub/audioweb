@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListFilesComponent } from './list-files.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('ListFilesComponent', () => {
   let component: ListFilesComponent;
@@ -8,7 +9,8 @@ describe('ListFilesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListFilesComponent ]
+      declarations: [ ListFilesComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });
