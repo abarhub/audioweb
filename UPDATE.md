@@ -37,6 +37,6 @@ npm audit
 Ensuite pour les corriger, il faut executer :
 ```shell
 npm audit fix
-```shell
+```
 
 
