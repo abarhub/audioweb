@@ -22,6 +22,12 @@ Ensuite il faut monter la version de bootstrap et popper en faisant attention à
 npm i bootstrap@XXX @popperjs/core@XXX
 ```
 
+* Mise à jour de fontawesome
+
+```shell
+npm i @fortawesome/fontawesome-free@XXX
+```
+
 * Analyse des problèmes de sécurité
 Pour analyser les problèmes de sécurité, il faut executer :
 ```shell
