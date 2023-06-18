@@ -13,24 +13,15 @@ export class AppComponent implements OnInit {
 
   urlCourante: Fichier | null = null;
   no: number = 0;
-  // private stopPlay: boolean = true;
-  // private fini: boolean = false;
   private initialise: boolean = false;
   selectUrl: Subject<string> = new Subject();
-  // private audioObj = new Audio();
   urlSelectionee: string = '';
-
-
-  // @ViewChild('audio') audio: any;
-
 
   constructor(private listeFichierService: ListeFichiersService) {
 
   }
 
   ngOnInit(): void {
-    // this.suite();
-    // this.attachListeners();
     this.init();
   }
 

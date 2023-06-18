@@ -2,6 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {ListFilesComponent} from './list-files/list-files.component';
+import {PlayerComponent} from './player/player.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,7 +13,9 @@ describe('AppComponent', () => {
         HttpClientTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        ListFilesComponent,
+        PlayerComponent
       ],
     }).compileComponents();
   });
