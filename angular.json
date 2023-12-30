@@ -78,18 +78,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "audioweb:build"
+            "buildTarget": "audioweb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "audioweb:build:production"
+              "buildTarget": "audioweb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "audioweb:build"
+            "buildTarget": "audioweb:build"
           }
         },
         "test": {
