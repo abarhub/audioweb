@@ -10,7 +10,7 @@
     "test_no_ui": "ng test --browsers ChromeHeadless  --watch=false --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "copysite": "xcopy /e /v /y .\\dist\\audioweb .\\docs",
+    "copysite": "xcopy /e /v /y .\\dist\\audioweb\\browser .\\docs",
     "rmsite": "rimraf ./docs/*",
     "generatesite": "npm-run-all rmsite copysite"
   },
