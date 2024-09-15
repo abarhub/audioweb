@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListFilesComponent } from './list-files.component';
-import {HttpClientModule} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('ListFilesComponent', () => {
   let component: ListFilesComponent;
@@ -9,9 +9,10 @@ describe('ListFilesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListFilesComponent ],
-      imports: [HttpClientModule]
-    })
+    declarations: [ListFilesComponent],
+    imports: [],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+})
     .compileComponents();
   });
 
