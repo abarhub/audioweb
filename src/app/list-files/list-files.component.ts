@@ -3,9 +3,10 @@ import {Fichier} from '../dto/fichier';
 import {ListeFichiersService} from '../services/liste-fichiers.service';
 
 @Component({
-  selector: 'app-list-files',
-  templateUrl: './list-files.component.html',
-  styleUrls: ['./list-files.component.scss']
+    selector: 'app-list-files',
+    templateUrl: './list-files.component.html',
+    styleUrls: ['./list-files.component.scss'],
+    standalone: false
 })
 export class ListFilesComponent implements OnInit {
 
