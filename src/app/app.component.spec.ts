@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import {ListFilesComponent} from './list-files/list-files.component';
 import {PlayerComponent} from './player/player.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -15,7 +15,7 @@ describe('AppComponent', () => {
         PlayerComponent
     ],
     imports: [RouterTestingModule],
-    providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+    providers: [provideHttpClient(withXhr(), withInterceptorsFromDi()), provideHttpClientTesting()]
 }).compileComponents();
   });
 

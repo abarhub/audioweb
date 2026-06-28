@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {Fichier} from '../dto/fichier';
 import {ListeFichiersService} from '../services/liste-fichiers.service';
 
@@ -6,6 +6,7 @@ import {ListeFichiersService} from '../services/liste-fichiers.service';
     selector: 'app-list-files',
     templateUrl: './list-files.component.html',
     styleUrls: ['./list-files.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ListFilesComponent implements OnInit {

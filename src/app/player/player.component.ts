@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, Output, ViewChild, EventEmitter} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, Output, ViewChild, EventEmitter, ChangeDetectionStrategy} from '@angular/core';
 import {Fichier} from '../dto/fichier';
 import {Subject} from 'rxjs';
 
@@ -6,6 +6,7 @@ import {Subject} from 'rxjs';
     selector: 'app-player',
     templateUrl: './player.component.html',
     styleUrls: ['./player.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PlayerComponent implements OnInit {
