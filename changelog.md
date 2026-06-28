@@ -1,6 +1,7 @@
 # version 1.8.0 (28/06/2026)
 * passage à angular 22.0.4
 * monté de version des tests
+* monté de version du build angular
 
 # version 1.7.0 (22/06/2025)
 * passage à angular 20.0.4
