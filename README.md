@@ -2,7 +2,7 @@
 
 [![Tests CI](https://github.com/abarhub/audioweb/actions/workflows/npm_action.yml/badge.svg?branch=master)](https://github.com/abarhub/audioweb/actions/workflows/npm_action.yml)
 
-Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 22.0.8.
 
 [Site](https://abarhub.github.io/audioweb/)
 
