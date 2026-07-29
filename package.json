@@ -13,7 +13,7 @@
     "copysite": "xcopy /e /v /y .\\dist\\audioweb\\browser .\\docs",
     "rmsite": "rimraf ./docs/*",
     "generatesite": "npm-run-all rmsite copysite",
-    "sonar": "sonar-scanner"
+    "sonar": "sonar-scanner-npm"
   },
   "private": true,
   "dependencies": {

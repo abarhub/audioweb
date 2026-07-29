@@ -28,6 +28,11 @@ npm i bootstrap@XXX @popperjs/core@XXX
 npm i @fortawesome/fontawesome-free@XXX
 ```
 
+* Pour mettre à jour le client sonar
+```shell
+npm install --global @sonar/scan
+```
+
 * Analyse des problèmes de sécurité
 Pour analyser les problèmes de sécurité, il faut executer :
 ```shell
