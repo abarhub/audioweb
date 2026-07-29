@@ -1,3 +1,6 @@
+# version 1.9.0 (29/07/2026)
+* passage à angular 22.0.8
+
 # version 1.8.0 (28/06/2026)
 * passage à angular 22.0.4
 * monté de version des tests
